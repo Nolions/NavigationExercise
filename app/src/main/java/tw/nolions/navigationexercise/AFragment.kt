@@ -23,7 +23,11 @@ class AFragment : Fragment() {
 
         val navController = findNavController(this)
         navigate_btn.setOnClickListener {
-            navController.navigate(R.id.BFragment)
+//            navController.navigate(R.id.destination_b)
+
+            // pass value by argument
+            val action = AFragmentDirections.actionAtoB("1")
+            navController.navigate(action)
         }
     }
 }
